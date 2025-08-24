@@ -15,6 +15,7 @@ typedef struct item
     int quantidade;
 } Item;
 
+// declaraçao das funções
 Item cadastrarItem(Item item);
 void exibirItem(Item *item);
 Item *buscarItem(Item mochila[], char nome[], int numItens);
@@ -117,6 +118,7 @@ void imprimirLista(Item mochila[], int numItens)
     }
 }
 
+// exibe menu principal com as funções disponiveis
 void menuPrincipal()
 {
     // inicializa variáveis
@@ -249,35 +251,3 @@ int main()
 
     return 0;
 }
-
-// Enum CriterioOrdenacao:
-// Define os critérios possíveis para a ordenação dos itens (nome, tipo ou prioridade).
-
-// Vetor mochila:
-// Armazena até 10 itens coletados.
-// Variáveis de controle: numItens (quantidade atual), comparacoes (análise de desempenho), ordenadaPorNome (para controle da busca binária).
-
-// limparTela():
-// Simula a limpeza da tela imprimindo várias linhas em branco.
-
-// exibirMenu():
-// Apresenta o menu principal ao jogador, com destaque para status da ordenação.
-
-// inserirItem():
-// Adiciona um novo componente à mochila se houver espaço.
-// Solicita nome, tipo, quantidade e prioridade.
-// Após inserir, marca a mochila como "não ordenada por nome".
-
-// removerItem():
-// Permite remover um componente da mochila pelo nome.
-// Se encontrado, reorganiza o vetor para preencher a lacuna.
-
-// menuDeOrdenacao():
-// Permite ao jogador escolher como deseja ordenar os itens.
-// Utiliza a função insertionSort() com o critério selecionado.
-// Exibe a quantidade de comparações feitas (análise de desempenho).
-
-// buscaBinariaPorNome():
-// Realiza busca binária por nome, desde que a mochila esteja ordenada por nome.
-// Se encontrar, exibe os dados do item buscado.
-// Caso contrário, informa que não encontrou o item.
