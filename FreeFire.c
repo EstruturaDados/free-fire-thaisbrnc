@@ -125,7 +125,7 @@ void menuPrincipal()
     char opcao = 'S';
     Item mochila[10] = {0};
     int numItens = 0;
-    char itemNome[30] = "\0";
+    char itemNome[30] = {0};
     int result = 0;
     Item *itemBuscado = NULL;
 
@@ -186,7 +186,7 @@ void menuPrincipal()
 
             do
             {
-                itemNome[30] = '\0';
+                itemNome[0] = '\0';
                 printf("\nInforme o nome do item a ser removido: ");
                 scanf(" %[^\n]", itemNome);
                 result = removerItem(mochila, itemNome, &numItens);
@@ -219,7 +219,7 @@ void menuPrincipal()
             {
                 do
                 {
-                    itemNome[30] = '\0';
+                    itemNome[0] = '\0';
                     printf("\nInforme o nome do item a ser buscado: ");
                     scanf(" %[^\n]", itemNome);
                     itemBuscado = buscarItem(mochila, itemNome, numItens);
@@ -232,7 +232,7 @@ void menuPrincipal()
             break;
 
         case '0':
-            printf("\nEncerrando o jogo...\n\n");
+            printf("\nFechando a mochila...\n\n");
 
             break;
 
