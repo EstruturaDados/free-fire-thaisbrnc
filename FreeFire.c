@@ -88,16 +88,15 @@ int removerItem(Item mochila[], char nome[], int *numItens)
         {
             // substitui o item removido pelo último item
             mochila[i] = mochila[*numItens - 1];
+            // decrementa o contador de itens
             (*numItens)--;
             printf("\nItem removido com sucesso.\n");
             return 1;
         }
-        else
-        {
-            printf("\nItem não encontrado.\n");
-            return 0;
-        }
     }
+
+    printf("\nItem não encontrado.\n");
+    return 0;
 }
 
 // exibe todos os itens cadastrados
